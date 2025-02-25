@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+  <script src="kinema.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <a-scene stats physics="gravity: -5;">
+
+    <a-asset_item id="doorT"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDHEZRRyK7DqluLp88KA4m1RXenxwWV0pFUg&s"></a-asset_item>
+    <a-asset_item id="plateT"
+      src="https://tse3.mm.bing.net/th?id=OIP.IgeJLSsJ4Yj8G7y5yvbcagAAAA&rs=1&pid=ImgDetMain"></a-asset_item>
+    <a-asset-item id="tunnelModel" src="scifi_corridor_gltf/scene.gltf"></a-asset-item>
+    <a-asset-item id="endScene" src="building_entrance_gltf/scene.gltf"></a-asset-item>
+    <a-asset-item id="wallT" src="SpaceStation.jpg"></a-asset-item>
+    <audio id="sound1" src="sound1.mp3" preload="auto"></audio>
+
+
+
+    <a-entity environment="preset: tron;"></a-entity>
+
+
+    <a-entity class="room">
+      <a-entity class="wall2" position="19 0 45">
+        <a-box width="2" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg" static-body> </a-box>
+        <a-box width="2" height="7" depth="0.1" position="2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="1" depth="0.1" position="0 2.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" rotation="0 180 0" position="19 2.5 45">
+        <a-box width="2" height="2" depth="0.1" position="0 1.5 0" src="wallsspace.jpg" </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="90 0 0" position="19 5 38.5">
+        <a-box width="15" height="10" depth="0.1" position="0 1.5 0" src="wallsspace.jpg"> </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="12 0 40">
+        <a-box width="10" height="7" depth="0.1" position="0 1.5 0" src="wallsspace.jpg"> </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="26 0 38">
+        <a-box width="10" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" position="19 0 35" color="A9A9A9">
+        <a-box width="2" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="7" depth="0.1" position="2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="1" depth="0.1" position="0 2.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="19 2.5 35">
+        <a-box width="2" height="2" depth="0.1" position="0 1.5 0" src="wallsspace.jpg" </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="22 0 35">
+        <a-box width="4" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="12 0 35">
+        <a-box width="4" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+    </a-entity>
+
+    <a-entity class="room2">
+      <a-entity class="wall2" position="19 0 15" color="A9A9A9">
+        <a-box width="2" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="7" depth="0.1" position="2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="1" depth="0.1" position="0 2.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" rotation="0 180 0" position="19 2.5 15">
+        <a-box width="2" height="2" depth="0.1" position="0 1.5 0" src="wallsspace.jpg" </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" rotation="90 0 0" position="21 5 3.5">
+        <a-box width="23" height=" 21" depth="0.1" position="0 1.5 0" src="wallsspace.jpg"> </a-box>
+      </a-entity>
+
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="12 0 3">
+        <a-box width="20" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="19 0 -5">
+        <a-box width="18" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" position="30 0 6" rotation="0 90 0">
+        <a-box width="2" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="7" depth="0.1" position="2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="1" depth="0.1" position="0 2.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="30 2.5 6">
+        <a-box width="2" height="2" depth="0.1" position="0 1.5 0" src="wallsspace.jpg" </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="12 0 15">
+        <a-box width="4" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="30 0 10">
+        <a-box width="6" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="30 0 -3">
+        <a-box width="8" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="24 0 15">
+        <a-box width="9" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+    </a-entity>
+
+    <a-entity class="room3">
+      <a-entity class="wall2" position="50 0 6" rotation="0 90 0">
+        <a-box width="2" height="12" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="12" depth="0.1" position="2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="1" depth="0.1" position="0 2.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" rotation="0 90 0" position="50 4 6">
+        <a-box width="2" height="5" depth="0.1" position="0 1.5 0" src="wallsspace.jpg" </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" rotation="90 0 0" position="59 8 3">
+        <a-box width="21" height="25" depth="0.1" position="0 1.5 0" src="wallsspace.jpg"> </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="57 1 14">
+        <a-box width="18" height="10" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="68 1 2.5">
+        <a-box width="19" height="10" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box> </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="22 0 45">
+        <a-box width="4" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="12 0 45">
+        <a-box width="4" height="7" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" position="56 0 -5" rotation="0 180 0">
+        <a-box width="2" height="12" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="12" depth="0.1" position="2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="1" depth="0.1" position="0 2.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" rotation="0 180 0" position="56 4 -5">
+        <a-box width="2" height="5" depth="0.1" position="0 1.5 0" src="wallsspace.jpg" </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="50 0 10">
+        <a-box width="6" height="12" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="50 0 -3">
+        <a-box width="8" height="12" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="62 0 -5">
+        <a-box width="10" height="12" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="49 0 -5">
+        <a-box width="4" height="12" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+    </a-entity>
+
+    <a-box static-body rotation="90 0 0" position="54 1.7 -1" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="54 1.3 -1" src="wallsspace.jpg"></a-box>
+
+    <a-box static-body rotation="90 0 0" position="57 1.7 -1" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="57 1.3 -1" src="wallsspace.jpg"></a-box>
+
+    <a-box static-body rotation="90 0 0" position="60 1.7 -1" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="60 1.3 -1" src="wallsspace.jpg"></a-box>
+
+    <a-box static-body rotation="90 0 0" position="63 1.7 -1" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="63 1.3 -1" src="wallsspace.jpg"></a-box>
+
+    <a-box static-body rotation="90 0 0" position="66 1.7 -1" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="66 1.3 -1" src="wallsspace.jpg"></a-box>
+
+    <a-box static-body rotation="90 0 0" position="66 2.3 3" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="66 2 3" src="wallsspace.jpg"></a-box>
+
+    <a-box static-body rotation="90 0 0" position="66 2.3 6" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="66 2 6" src="wallsspace.jpg"></a-box>
+
+    <a-box static-body rotation="90 0 0" position="66 2.3 9" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="66 2 9" src="wallsspace.jpg"></a-box>
+
+    <a-box static-body rotation="90 0 0" position="66 2.3 12" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="66 2 12" src="wallsspace.jpg"></a-box>
+
+    <a-box static-body rotation="90 0 0" position="63 2.6 12" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="63 2.3 12" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="60 2.9 12" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="60 2.6 12" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="57 3.2 12" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="57 2.9 12" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="54 3.6 12" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="54 3.2 12" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="54 4.0 9" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="54 3.3 9" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="54 4.3 6" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="54 3.6 6" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="54 4.3 4.5" opacity="0" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" position="54 3.6 4.5" src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" width="4" height="4" opacity="0" position="60 4.3 2"
+      src="wallsspace.jpg"></a-box>
+    <a-box static-body rotation="90 0 0" width="4" height="4" position="60 3.6 2" src="wallsspace.jpg"></a-box>
+
+
+
+
+
+    <a-entity class="room4">
+      <a-entity class="wall2" position="56 0 -25" color="A9A9A9">
+        <a-box width="2" height="6" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="6" depth="0.1" position="2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="1" depth="0.1" position="0 2.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" rotation="0 180 0" position="56 2.5 -25">
+        <a-box width="2" height="2" depth="0.1" position="0 1.5 0" src="wallsspace.jpg" </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="90 0 0" position="54 4.5 -35.5">
+        <a-box width="20" height="18" depth="0.1" position="0 1.5 0" src="wallsspace.jpg"> </a-box>
+      </a-entity>
+
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="63 0 -36">
+        <a-box width="18" height="6" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg" </a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="52 0 -43">
+        <a-box width="18" height="6" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="45 0 -42">
+        <a-box width="6" height="6" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 90 0" position="45 0 -30">
+        <a-box width="6" height="6" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" position="45 0 -34" rotation="0 90 0">
+        <a-box width="2" height="6" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="6" depth="0.1" position="2 1.5 0" src="wallsspace.jpg"></a-box>
+        <a-box width="2" height="1" depth="0.1" position="0 2.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" rotation="0 90 0" position="45 2.5 -34">
+        <a-box width="2" height="2" depth="0.1" position="0 1.5 0" src="wallsspace.jpg" </a-box>
+      </a-entity>
+
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="47 0 -25">
+        <a-box width="9" height="6" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+      <a-entity class="wall2" static-body rotation="0 180 0" position="59 0 -25">
+        <a-box width="4" height="6" depth="0.1" position="-2 1.5 0" src="wallsspace.jpg"></a-box>
+      </a-entity>
+
+    </a-entity>
+    <a-box id="wallex" static-body src="wallsspace.jpg" position="45 0 -34" scale="0.35 4.5 2.5"></a-box>
+
+    <a-entity class="maze">
+      <a-cylinder height="5" color="black" position="19 0 10"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="21 0 10" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="23 0 10" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="25 0 10" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="27 0 10" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="28 0 10" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="29 0 10" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="17 0 10" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="15 0 10" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="15 0 8" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="15 0 6" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="15 0 4" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="15 0 2" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="15 0 0" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="19 0 5" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="19 0 3" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="19 0 1" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="19 0 -1" static-body> </a-cylinder>
+      <a-cylinder height="5" color="black" position="17 0 -1"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="24 0 -1"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="24 0 -1"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="24 0 1"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="24 0 3"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="24 0 5"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="26 0 -1"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="26 0 1"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="26 0 3"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="26 0 5"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="29 0 3"> </a-cylinder>
+      <a-cylinder height="5" color="black" position="28 0 3"> </a-cylinder>
+
+    </a-entity>
+
+    <a-entity class="TeleRoom" position="-5 2.75 2">
+      <a-box position="0.23 1 0.3" scale="5.2 2.7 0.15" color="black"></a-box>
+      <a-box scale="10.5 7.3 0.35"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="-5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" position="0 0 10.5"></a-box>
+      <a-text value="1 + 1 - 1 = ?" color="white" position="-0.31 1 0.451"></a-text>
+      <a-text value="1" color="red" position="-2.5 0 0.5"></a-text>
+      <a-box id="doorTP2" position=" -2.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="2" color="blue" position="0.5 0 0.5"></a-text>
+      <a-box id="doorTPF" position="0.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="3" color="orange" position="3 0 0.5"></a-text>
+      <a-box id="doorTPF2" position="3 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="4" color="purple" position="5 0 3.5" rotation="0 270 0"></a-text>
+      <a-box id="doorTPF9" position="5 -1.5 3.5" rotation="0 270 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+      <a-text value="5" color="black" position="-4 0 3.5" rotation="0 90 0"></a-text>
+      <a-box id="doorTPF10" position="-4 -1.5 3.5" rotation="0 90 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+    </a-entity>
+
+    <a-entity class="TeleRoom2" position="-20 2.75 2">
+      <a-box position="0.23 1 0.3" scale="5.2 2.7 0.15" color="black"></a-box>
+      <a-box scale="10.5 7.3 0.35"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="-5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" position="0 0 10.5"></a-box>
+      <a-text value="(5 + 7) / 4  = ?" color="white" position="-0.31 1 0.451"></a-text>
+      <a-text value="1" color="red" position="-2.5 0 0.5"></a-text>
+      <a-box id="doorTPF3" position=" -2.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="2" color="blue" position="0.5 0 0.5"></a-text>
+      <a-box id="doorTPF4" position="0.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="3" color="orange" position="3 0 0.5"></a-text>
+      <a-box id="doorTP3" position="3 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="4" color="purple" position="5 0 3.5" rotation="0 270 0"></a-text>
+      <a-box id="doorTPF11" position="5 -1.5 3.5" rotation="0 270 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+      <a-text value="5" color="black" position="-4 0 3.5" rotation="0 90 0"></a-text>
+      <a-box id="doorTPF12" position="-4 -1.5 3.5" rotation="0 90 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+    </a-entity>
+
+    <a-entity class="TeleRoom3" position="-35 2.75 2">
+      <a-box position="0.23 1 0.3" scale="5.2 2.7 0.15" color="black"></a-box>
+      <a-box scale="10.5 7.3 0.35"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="-5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" position="0 0 10.5"></a-box>
+      <a-text value="(8/4) + (5-3) X ((9/3) - 2) = ?" color="white" position="-1 1 0.451"></a-text>
+      <a-text value="1" color="red" position="-2.5 0 0.5"></a-text>
+      <a-box id="doorTPF5" position=" -2.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="2" color="blue" position="0.5 0 0.5"></a-text>
+      <a-box id="doorTP4" position="0.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="3" color="orange" position="3 0 0.5"></a-text>
+      <a-box id="doorTPF6" position="3 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="4" color="purple" position="5 0 3.5" rotation="0 270 0"></a-text>
+      <a-box id="doorTPF13" position="5 -1.5 3.5" rotation="0 270 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+      <a-text value="5" color="black" position="-4 0 3.5" rotation="0 90 0"></a-text>
+      <a-box id="doorTPF14" position="-4 -1.5 3.5" rotation="0 90 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+    </a-entity>
+
+    <a-entity class="TeleRoom4" position="-50 2.75 2">
+      <a-box position="0.23 1 0.3" scale="5.2 2.7 0.15" color="black"></a-box>
+      <a-box scale="10.5 7.3 0.35"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="-5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" position="0 0 10.5"></a-box>
+      <a-text value="( (12/3) X 2) - (9 - 7) +  √16 = ?" color="white" position="-1 1 0.451"></a-text>
+      <a-text value="1" color="red" position="-2.5 0 0.5"></a-text>
+      <a-box id="doorTPF7" position=" -2.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="2" color="blue" position="0.5 0 0.5"></a-text>
+      <a-box id="doorTPF8" position="0.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="3" color="orange" position="3 0 0.5"></a-text>
+      <a-box id="doorTPF15" position="3 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="4" color="purple" position="5 0 3.5" rotation="0 270 0"></a-text>
+      <a-box id="doorTP5" position="5 -1.5 3.5" rotation="0 270 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+      <a-text value="5" color="black" position="-4 0 3.5" rotation="0 90 0"></a-text>
+      <a-box id="doorTPF16" position="-4 -1.5 3.5" rotation="0 90 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+    </a-entity>
+
+    <a-entity class="TeleRoom5" position="-65 2.75 2">
+      <a-box position="0.23 1 0.3" scale="5.2 2.7 0.15" color="black"></a-box>
+      <a-box scale="10.5 7.3 0.35"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" rotation="0 90 0" position="-5.25 0 5.25"></a-box>
+      <a-box scale="10.5 7.3 0.35" position="0 0 10.5"></a-box>
+      <a-text value="( (20/4) X 3) - ( (18/3) - 4 ) +  √25 = ?" color="white" position="-1 1 0.451"></a-text>
+      <a-text value="1" color="red" position="-2.5 0 0.5"></a-text>
+      <a-box id="doorTPF17" position=" -2.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="2" color="blue" position="0.5 0 0.5"></a-text>
+      <a-box id="doorTPF18" position="0.5 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="3" color="orange" position="3 0 0.5"></a-text>
+      <a-box id="doorTPF19" position="3 -1.5 1" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+      <a-text value="4" color="purple" position="5 0 3.5" rotation="0 270 0"></a-text>
+      <a-box id="doorTPF20" position="5 -1.5 3.5" rotation="0 270 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+      <a-text value="5" color="black" position="-4 0 3.5" rotation="0 90 0"></a-text>
+      <a-box id="doorTP6" position="-4 -1.5 3.5" rotation="0 90 0" src="#doorT" depth="0.25" height="2.25"
+        width="2.25"></a-box>
+    </a-entity>
+
+
+
+    <a-gltf-model src="#tunnelModel" position="46.5 0.01 25" scale="0.5 0.4 0.6"></a-gltf-model>
+
+    <a-gltf-model src="#tunnelModel" position="40 0.01 -21.5" scale="0.5 0.4 0.6" rotation="0 90 0"></a-gltf-model>
+
+    <a-gltf-model src="#tunnelModel" position="28 0.01 -15" scale="0.5 0.4 0.6" rotation="0 180 0"></a-gltf-model>
+
+    <a-gltf-model src="#endScene" position="35 0.3 -34" scale="5 10 5" rotation="0 90 0" id="end1"></a-gltf-model>
+
+
+    <a-text value="4315" color="white" rotation="270 151 0" position="28.5 0 1.4"></a-text>
+
+    <a-entity id="input1" text="value: ; color: #000000;" position="29.3 3.5 8" rotation="0 270 0">
+      <a-plane color="red" height="0.15" width="1.1" side="double"></a-plane>
+    </a-entity>
+
+    <a-box id="doorTP" position="55 1 -34" src="#doorT" depth="0.25" height="2.25" width="2.25"></a-box>
+    <a-box id="button3" color="blue" position="60 5 2.5" scale="0.5 0.5 0.5"></a-box>
+
+    <a-box id="door1" position="19 1 45" src="#doorT" depth="0.25" height="2.25" width="2.25" static-body></a-box>
+    <a-box id="pick1" position="24 1 42" color="red" static-body></a-box>
+
+    <a-box src="#plateT" id="plate1" position="14.7 0.2 39" scale="1 0.25 1"></a-box>
+
+    <a-sphere id="soundS" position="35 0.3 -34" radius="1.25" sound="src:#sound1; loop:false" opacity="0"></a-sphere>
+
+    <a-plane static-body rotation="-90 0 0" position="0 1 0" width="700" height="500" depth="400" color="#7BC8A4"
+      opacity="0"></a-plane>
+    <a-plane static-body rotation="-90 0 0" position="0 0 0" width="700" height="500" depth="400" color="#7BC8A4"
+      opacity="0"></a-plane>
+
+    <a-sky color="#60646b"></a-sky>
+
+    <a-camera id="cam1" universal-controls="acceleration: 1000" position="19 5 47" kinema-body="radius: 0.9">
+      <a-sound src="url(chill-abstract_intention-12099.mp3)" autoplay="true" position="0 0 0" loop="true"
+        volume="0.25"></a-sound>
+      <a-cursor>
+        <a-image id="victory" scale="7 8 7" src="maxresdefault.jpg" opacity="0" position="0 -26 -0.5"></a-image>
+      </a-cursor></a-camera>
+  </a-scene>
+</body>
+
+</html>
